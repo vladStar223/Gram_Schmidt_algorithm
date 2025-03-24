@@ -72,6 +72,7 @@ int main() {
     }
     e[0] = a[0];
     vector<double> minus_proj(r);
+    cout << "Ответ" << endl;
     for (int i = 0; i < r; i++) {
         minus_proj[i] = 0;
     }
@@ -80,6 +81,7 @@ int main() {
         e[i] = minus_vector(a[i], minus_proj);
     }
     for (int i = 0; i < n; i++) {
+        cout << "e" << i + 1 << ": ";
         for (int j = 0; j < r; j++) {
             cout << e[i][j] << " ";
         }
