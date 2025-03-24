@@ -71,11 +71,8 @@ int main() {
 
     }
     e[0] = a[0];
-    vector<double> minus_proj(r);
+    vector<double> minus_proj(r,0);
     cout << "Ответ" << endl;
-    for (int i = 0; i < r; i++) {
-        minus_proj[i] = 0;
-    }
     for (int i = 1; i < n; i++) {
         minus_proj = sum_vector(minus_proj, proj(a[i], e[i - 1]));
         e[i] = minus_vector(a[i], minus_proj);
