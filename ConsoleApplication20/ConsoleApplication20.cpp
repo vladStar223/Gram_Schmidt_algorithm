@@ -43,12 +43,20 @@ int main() {
     setlocale(LC_ALL, "Russian");
     string data;
     string bw;
-    int r = 2;
-    int  n = 2;
+    int r = 2;// размерность пространства
+    int  n = 2;// количество вектров
     
     cout << "Hello user" << endl;
-    n = 2;
-    vector<double>test(r);
+    string data_r;
+    cout << "Input размерность  векторов" << endl;
+    getline(cin, data_r);
+    r = stoi(data_r);
+    cout << " " << endl;
+    string data_n;
+    cout << "Input k  количество векторов" << endl;
+    getline(cin, data_n);
+    n = stoi(data_n);
+    cout << " " << endl;
     vector<vector<double>>a(n, vector<double>(r));
     vector<vector<double>>e(n, vector<double>(r));
     for (int i = 0; i < n; i++) {
